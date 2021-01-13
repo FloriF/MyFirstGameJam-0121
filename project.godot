@@ -15,9 +15,15 @@ _global_script_class_icons={
 
 [application]
 
-config/name="MyFirstGameJam-0121"
+config/name="Bulletcraze"
+config/description="A platformer-bullethell game created for the 'My first Game Jam' in January 2021."
 run/main_scene="res://level/TestingPlatform.tscn"
 config/icon="res://icon.png"
+
+[debug]
+
+settings/fps/force_fps=60
+settings/stdout/print_fps=true
 
 [input]
 
@@ -94,6 +100,12 @@ shoot={
  ]
 }
 
+[physics]
+
+2d/physics_engine="GodotPhysics"
+2d/thread_model=2
+
 [rendering]
 
+threads/thread_model=2
 environment/default_environment="res://default_env.tres"

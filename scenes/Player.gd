@@ -18,6 +18,7 @@ var mouse_pos = Vector2(0, 0)
 # projectiles
 var projectileScene = load("res://scenes/Projectile.tscn")
 var projectile_amount = 0
+var projectile_speed = 1750
 
 ########################## DOING STUFF ########################
 
@@ -39,12 +40,15 @@ func _physics_process(delta):
 	self.look_at(mouse_pos)
 
 	# spawn projectile
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		# instance in a projectile when clicking
 		var projectile = load("res://scenes/Projectile.tscn").instance()
 		$ProjectileSpawnLocation.add_child(projectile)
+		projectile.apply_impulse(Vector2(), Vector2(projectile_speed, 0).rotated(rotation))
 		# make the projectile not a child of the player and move with it, but as top level child
 		projectile.set_as_toplevel(true)
+		# set impulse to the projectlie
+#		projectile.linear_velocity = projectile_speed * 
 		# count the number of projectiles in the scene
 		projectile_amount += 1
 		print(projectile_amount)

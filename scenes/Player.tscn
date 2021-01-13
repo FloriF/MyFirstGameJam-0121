@@ -19,6 +19,10 @@ shape = SubResource( 1 )
 
 [node name="ProjectileSpawnLocation" type="Position2D" parent="."]
 position = Vector2( 20, 0 )
+rotation = 1.5708
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="ProjectileSpawnLocation"]
 scale = Vector2( 0.1, 0.1 )
