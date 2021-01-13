@@ -6,5 +6,9 @@ Repository for the game I created during the 'My First Game Jam' in January 2021
 ## Implemented Features:
 
 Move and jump (using ```A, D, SPACE``` keys).
+
 Player character looks at mouse position.
-Spawn projectile (with no own initial velocity) by pressing the left mouse button.
+
+Spawn projectiles by pressing the left mouse button.
+
+Projectiles do not despawn, FPS and current number of spawned projectiles in debug window.
